@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form [formGroup]= "Formulario">
+        <label for="">Campo1</label><br>
+        <input 
+            type="text"
+            placeholder="ingresa"
+            formControlName ="nombre" 
+            required
+            ><br>
+        <small *ngIf = "formularioReactivo.nombre?.errors?.required && formularioReactivo.nombre.touched">
+        dato requerido
+        </small>
+
+        <label for="">Campo2</label><br>
+        <input type="text"
+               placeholder="ingresa"
+               formControlName ="apellido" 
+               required
+        >
+        <small *ngIf = "formularioReactivo.apellido?.errors?.required && formularioReactivo.apellido.touched"> 
+         Ingrese carárteres
+        </small>
+        <br>
+
+        <button 
+            type="submit"
+            (click)= "botonEnviar()"
+            [disabled]= "!Formulario.valid"> Enviar</button>
+
+     </form>
+
+</body>
+</html>
