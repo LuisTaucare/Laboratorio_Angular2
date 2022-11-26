@@ -8,7 +8,7 @@ import {environment} from '../../environments/environment';
   providedIn: 'root'
 })
 export class FormularioService {
-  url_backend = environment.url_backend+"/regristroForm"
+  url_backend = environment.url_backend+"/registroForm"
 
   constructor(private http:HttpClient) { }
   
