@@ -18,5 +18,9 @@ export class FormularioService {
 
    
   }
+  obtener_datosFormulario(){
+    return this.http.get(`${this.url_backend}/obtener-registros`);
+
+  }
 
 }

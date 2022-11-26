@@ -10,8 +10,11 @@ import { FormularioService } from 'src/app/servicios/formulario.service';
 export class FormularioComponent implements OnInit {
 
     Formulario:any;
-  constructor(private fb:FormBuilder, private serviceFormulario: 
+
+  constructor(private fb:FormBuilder, private serviceFormulario:
     FormularioService) { }
+
+    datos:any;
 
   ngOnInit(): void {
     this.Formulario = this.fb.group({
@@ -41,6 +44,12 @@ botonEnviar(){
   )
 
 }
+
+obtener(){
+    console.log("hola");
+}
+
+
 
 };
 
